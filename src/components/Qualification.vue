@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="pt-1">
-      <p class="mb-2 text-xl font-bold text-gray-600">Uridium Technologies Limited</p>
+      <p class="mb-2 text-xl font-bold text-gray-600">Sterling Bank</p>
       <p class="text-gray-700">
         Software Developer
       </p>
