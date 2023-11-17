@@ -4,7 +4,7 @@
 <section class="flex items-center justify-center py-20 bg-white min-w-screen">
     <div class="px-16 bg-white">
         <div class="container flex flex-col items-start mx-auto lg:items-center">
-            <p class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don't just take our word for it</p>
+            <p class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don't just take my word for it</p>
 
 
             <h2 class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
@@ -19,11 +19,12 @@
                 <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
                     <div class="flex items-center justify-center">
                         <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-500 rounded-full">
-                            <img src="../assets/IMG-20220315-WA0000.jpg" class="object-cover w-full h-full">
+                            <img src="../assets/Victor-Ephraim.png" class="object-cover w-full h-full">
                         </div>
                         <div class="flex flex-col items-start justify-center">
-                            <h4 class="font-bold text-gray-800">John Doe</h4>
-                            <p class="text-gray-600">CEO of Something</p>
+                            <h4 class="font-bold text-gray-800">Ephraim Victor</h4>
+                            <p class="text-gray-600">General Manager PeopleOS <br>
+    Talent Acquisition, Performance Management,<br> Payroll Administration</p>
                         </div>
                     </div>
                     <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
@@ -34,8 +35,8 @@
                             <img src="../assets/IMG-20220315-WA0000.jpg" class="object-cover w-full h-full">
                         </div>
                         <div class="flex flex-col items-start justify-center">
-                            <h4 class="font-bold text-gray-800">Jane Doe</h4>
-                            <p class="text-gray-600">CTO of Business</p>
+                            <h4 class="font-bold text-gray-800">Idise Elomena</h4>
+                            <p class="text-gray-600">Head of Technology</p>
                         </div>
                     </div>
                     <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much

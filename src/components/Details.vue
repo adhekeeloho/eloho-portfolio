@@ -1,162 +1,293 @@
 <template>
   <div>
-    <div class="min-h-screen red bg-gray-100 font-mono mx-auto">
-      <div class="bg-white h-96 w-72 rounded-md just ok"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/Apex.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
-        </div>
-      </div>
-            <div class="bg-white h-96 w-72 rounded-md just ok"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/Travelaid.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
+    <div class="grid md:grid-cols-3">
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-1 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Sterling Power Wallet
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">React Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="#">View site</a>
+            </button>
+          </div>
         </div>
       </div>
-            <div class="bg-white h-96 w-72 rounded-md just"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/foodology.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
-        </div>
-      </div>
-      
-    </div>
 
-        <div class="min-h-screen red bg-gray-100 font-mono mx-auto">
-      <div class="bg-white h-96 w-72 rounded-md joe ok"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/panbear.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
-        </div>
-      </div>
-            <div class="bg-white h-96 w-72 rounded-md joe ok"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/llcdex.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-2 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Apex
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vue Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://test-apex.vercel.app/"> View site </a>
+            </button>
+          </div>
         </div>
       </div>
-            <div class="bg-white h-96 w-72 rounded-md joe"  >
-        <div class="flex justify-center items-center leading-none">
-          <img
-            src="../assets/movie.png"
-            alt="pic"
-            class="h-56 w-64 rounded-md shadow-2xl mt-6 transform -translate-y-12"
-          />
-        </div>
-        <div class="px-3">
-          <p class="block mb-1 font-extralight">Modelling</p>
-          <p class="text-xs tracking-tighter text-gray-600">
-            When it is your time, it’s your time. There is no point in worrying
-            about what you can’t control.
-          </p>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-3 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Socialpay
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vue Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://mysocialpay.ng/">view site</a>
+            </button>
+          </div>
         </div>
       </div>
-      
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-4 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Foodology
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vuetify Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://foodology.vercel.app/#/"> view site</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-5 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Travel Aid
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">React Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://travel-aid.vercel.app/">view site </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-6 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            News Hub
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vuetify Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://news-hub-two.vercel.app/#/"> view site </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-7 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Panbear Test
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vue Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://vigilant-hugle-71f819.netlify.app/">view site</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-8 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            LLCDEX LIMITED
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vue Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://llcdex.vercel.app/"> view site </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center max-w-sm mx-auto my-2 pb-10"
+      >
+        <div
+          class="bg-gray-400 trust-9 h-64 rounded-lg shadow-md bg-contain bg-center"
+        ></div>
+        <div
+          class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden"
+        >
+          <div
+            class="py-2 text-center font-bold uppercase tracking-wide text-gray-800"
+          >
+            Dogs Adoption Site
+          </div>
+          <div class="flex items-center justify-between py-2 px-3 bg-gray-400">
+            <h1 class="text-gray-800 font-bold">Vue Application</h1>
+            <button
+              class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700"
+            >
+              <a href="https://edentest.netlify.app/#/">view site</a>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.red {
-  direction: flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-  .just{
-    margin-top: 70px;
-  }
-.ok{
-      margin-right: 50px;
+.trust-1 {
+  background-image: url(../assets/Agent-page.PNG);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (max-width: 580px) {
-  .red {
-    direction: flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.trust-2 {
+  background-image: url(../assets/Apex.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.trust-3 {
+  background-image: url(../assets/socialpay.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.trust-4 {
+  background-image: url(../assets/foodology.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .just{
-    margin-top: 100px;
-  }
-  .ok{
-      margin-right: 0px;
-}
-.joe{
-  margin-top: 100px;  
-}
+.trust-5 {
+  background-image: url(../assets/Travelaid.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media (max-width: 920px) {
-  .red {
-    direction: flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .just{
-    margin-top: 100px;
-  }
-  .ok{
-      margin-right: 0px;
+.trust-6 {
+  background-image: url(../assets/Newshub.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.joe{
-  margin-top: 100px;  
+
+.trust-7 {
+  background-image: url(../assets/panbear.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.trust-8 {
+  background-image: url(../assets/llcdex.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.trust-9 {
+  background-image: url(../assets/eden.png);
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>

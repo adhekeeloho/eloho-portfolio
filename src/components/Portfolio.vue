@@ -95,7 +95,7 @@
   background-size: cover;
 }
 .s-wrap .s-item-1 {
-  background-image: url(../assets/Apex.png);
+  background-image: url(../assets/Agent-page.PNG);
   background-size: cover;
 }
 .s-wrap .s-item-2 {
@@ -107,11 +107,11 @@
   background-size: cover;
 }
 .s-wrap .s-item-4 {
-  background-image: url(../assets/Newshub.png);
+  background-image: url(../assets/socialpay.png);
   background-size: cover;
 }
-.s-wrap .s-item-5 {
-  background-image: url(../assets/eden.png);
+.s-wrap .s-item-5 { background-image: url(../assets/Apex.png);
+ 
   background-size: cover;
 }
 
