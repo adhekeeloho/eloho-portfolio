@@ -65,7 +65,7 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
             <li class="text-[#1B1C20] uppercase font-semibold hover:underline decoration-teal-400 decoration-double decoration-2 underline-offset-8"><RouterLink to="/">Home</RouterLink></li>
             <li class="text-[#1B1C20] uppercase font-semibold hover:underline decoration-teal-400 decoration-double decoration-2 underline-offset-8"><RouterLink to="/about">About Me</RouterLink></li>
             <li class="text-[#1B1C20] uppercase font-semibold hover:underline decoration-teal-400 decoration-double decoration-2 underline-offset-8"><RouterLink to="/portfolio">Portfolio</RouterLink></li>
-            <li class="text-[#1B1C20] uppercase font-semibold hover:underline decoration-teal-400 decoration-double decoration-2 underline-offset-8"><RouterLink to="/contact">Contact Me</RouterLink></li>
+            <!-- <li class="text-[#1B1C20] uppercase font-semibold hover:underline decoration-teal-400 decoration-double decoration-2 underline-offset-8"><RouterLink to="/contact">Contact Me</RouterLink></li> -->
           </ul>
         </div>
       </nav>

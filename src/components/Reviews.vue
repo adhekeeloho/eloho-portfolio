@@ -27,23 +27,22 @@
     Talent Acquisition, Performance Management,<br> Payroll Administration</p>
                         </div>
                     </div>
-                    <blockquote class="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
+                    <blockquote class="mt-8 text-lg text-gray-500">Adheke Eloho Joy has technical proficiency in VueJs and ReactJs programming languages which is truly impressive. She has consistently demonstrated the ability to mention specific achievements in projects which therefore showcases her analytical and problem-solving skills.</blockquote>
                 </div>
                 <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-teal-100">
                     <div class="flex items-center justify-center">
                         <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-100 rounded-full">
-                            <img src="../assets/IMG-20220315-WA0000.jpg" class="object-cover w-full h-full">
+                            <img src="../assets/mena2.jpg" class="object-conver w-full h-full">
                         </div>
                         <div class="flex flex-col items-start justify-center">
                             <h4 class="font-bold text-gray-800">Idise Elomena</h4>
-                            <p class="text-gray-600">Head of Technology</p>
+                            <p class="text-gray-600">Senior Developer<br>
+        Sparkle Nigeria</p>
                         </div>
                     </div>
-                    <blockquote class="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
-                        easier.
-                        Thanks for making such a great product."</blockquote>
+                    <blockquote class="mt-8 text-lg text-gray-500">Beyond her technical skills, what sets Adheke Eloho Joy apart is her exceptional teamwork and collaboration. In our fast-paced industry, effective communication and collaboration are crucial. Adheke Eloho Joy has consistently proven her ability to work seamlessly with cross-functional teams, fostering a positive and collaborative work environment.</blockquote>
                 </div>
-                <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+                <!-- <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
                     <div class="flex items-center justify-center">
                         <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-100 rounded-full">
                             <img src="../assets/IMG-20220315-WA0000.jpg">
@@ -56,7 +55,7 @@
                     <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
                         looking
                         for. I would highly recommend this to anyone."</blockquote>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
