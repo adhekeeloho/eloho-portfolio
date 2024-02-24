@@ -192,7 +192,9 @@
                 languages and frameworks.
               </p>
               <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-                <Download :pdf-url="pdfUrl" :pdf-file-name="pdfFileName"/>
+                <Download 
+                :pdf-url="pdfUrl" :pdf-file-name="pdfFileName"
+                />
               </div>
             </div>
             
@@ -213,7 +215,7 @@ export default {
   },
   data() {
     return {
-      pdfUrl: '../../Adheke,Eloho-C.V.pdf',
+      pdfUrl: '../../public/Adheke,Eloho-C.V.pdf',
       pdfFileName: 'Adheke,Eloho-CV.pdf'
     };
   }
