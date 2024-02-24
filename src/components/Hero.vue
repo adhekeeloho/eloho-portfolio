@@ -213,7 +213,7 @@ export default {
   },
   data() {
     return {
-      pdfUrl: '../../public/Adheke,Eloho-C.V.pdf',
+      pdfUrl: '../../Adheke,Eloho-C.V.pdf',
       pdfFileName: 'Adheke,Eloho-CV.pdf'
     };
   }
