@@ -195,6 +195,7 @@
                 <Download :pdf-url="pdfUrl" :pdf-file-name="pdfFileName"/>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -212,8 +213,8 @@ export default {
   },
   data() {
     return {
-      pdfUrl: '../../public/Adheke,Eloho-CV.pdf',
-      pdfFileName: 'my-pdf-file.pdf'
+      pdfUrl: '../../public/Adheke,Eloho-C.V.pdf',
+      pdfFileName: 'Adheke,Eloho-CV.pdf'
     };
   }
 };
@@ -242,6 +243,7 @@ export default {
   .hi {
     height: 120px;
     width: 250px;
+    
   }
 }
 
