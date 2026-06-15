@@ -1,64 +1,109 @@
-<template> 
+<template>
+  <section class="section relative overflow-hidden bg-[#06060f]">
+    <!-- Orbs -->
+    <div class="orb w-[400px] h-[400px] bg-teal-500/10 top-0 left-1/2 -translate-x-1/2"></div>
 
-<!-- Section 1 -->
-<section class="flex items-center justify-center py-20 bg-white min-w-screen">
-    <div class="px-16 bg-white">
-        <div class="container flex flex-col items-start mx-auto lg:items-center">
-            <p class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don't just take my word for it</p>
+    <div class="container-max relative z-10">
+      <!-- Header -->
+      <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="700">
+        <span class="section-label justify-center">Testimonials</span>
+        <h2 class="text-4xl lg:text-5xl font-bold font-display text-white mt-2">
+          What Others Say
+        </h2>
+        <p class="text-slate-400 mt-4 text-base">
+          Don't just take my word for it.
+        </p>
+      </div>
 
+      <!-- Testimonial cards -->
+      <div class="grid md:grid-cols-2 gap-6">
 
-            <h2 class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute right-0 hidden w-12 h-12 -mt-2 -mr-16 text-teal-600 lg:inline-block" viewBox="0 0 975.036 975.036">
-                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
-                </path>
-            </svg>
-                See what others are saying</h2>
-                <div class="block w-full h-0.5 max-w-lg mt-6 bg-teal-100 rounded-full"></div>
+        <!-- Card 1 -->
+        <div
+          class="glass-card p-8 flex flex-col gap-6"
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay="100"
+        >
+          <!-- Quote icon -->
+          <svg class="w-8 h-8 text-teal-400/50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
 
-            <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
-                <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
-                    <div class="flex items-center justify-center">
-                        <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-500 rounded-full">
-                            <img src="../assets/Victor-Ephraim.png" class="object-cover w-full h-full">
-                        </div>
-                        <div class="flex flex-col items-start justify-center">
-                            <h4 class="font-bold text-gray-800">Ephraim Victor</h4>
-                            <p class="text-gray-600">General Manager PeopleOS <br>
-    Talent Acquisition, Performance Management,<br> Payroll Administration</p>
-                        </div>
-                    </div>
-                    <blockquote class="mt-8 text-lg text-gray-500">Adheke Eloho Joy has technical proficiency in VueJs and ReactJs programming languages which is truly impressive. She has consistently demonstrated the ability to mention specific achievements in projects which therefore showcases her analytical and problem-solving skills.</blockquote>
-                </div>
-                <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-teal-100">
-                    <div class="flex items-center justify-center">
-                        <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-100 rounded-full">
-                            <img src="../assets/mena2.jpg" class="object-conver w-full h-full">
-                        </div>
-                        <div class="flex flex-col items-start justify-center">
-                            <h4 class="font-bold text-gray-800">Idise Elomena</h4>
-                            <p class="text-gray-600">Senior Developer<br>
-        Sparkle Nigeria</p>
-                        </div>
-                    </div>
-                    <blockquote class="mt-8 text-lg text-gray-500">Beyond her technical skills, what sets Adheke Eloho Joy apart is her exceptional teamwork and collaboration. In our fast-paced industry, effective communication and collaboration are crucial. Adheke Eloho Joy has consistently proven her ability to work seamlessly with cross-functional teams, fostering a positive and collaborative work environment.</blockquote>
-                </div>
-                <!-- <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
-                    <div class="flex items-center justify-center">
-                        <div class="w-16 h-16 mr-4 overflow-hidden bg-teal-100 rounded-full">
-                            <img src="../assets/IMG-20220315-WA0000.jpg">
-                        </div>
-                        <div class="flex flex-col items-start justify-center">
-                            <h4 class="font-bold text-gray-800">John Smith</h4>
-                            <p class="text-gray-600">Creator of Stuff</p>
-                        </div>
-                    </div>
-                    <blockquote class="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
-                        looking
-                        for. I would highly recommend this to anyone."</blockquote>
-                </div> -->
+          <!-- Quote text -->
+          <blockquote class="text-slate-300 leading-relaxed text-base flex-1">
+            Adheke Eloho Joy has technical proficiency in VueJs and ReactJs programming
+            languages which is truly impressive. She has consistently demonstrated the
+            ability to mention specific achievements in projects which therefore
+            showcases her analytical and problem-solving skills.
+          </blockquote>
+
+          <!-- Divider -->
+          <div class="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+          <!-- Author -->
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0">
+              <img
+                src="../assets/Victor-Ephraim.png"
+                alt="Ephraim Victor"
+                class="w-full h-full object-cover"
+              />
             </div>
+            <div>
+              <p class="font-semibold text-white font-display">Ephraim Victor</p>
+              <p class="text-slate-400 text-sm leading-snug mt-0.5">
+                General Manager, PeopleOS<br />
+                <span class="text-slate-500 text-xs">Talent Acquisition &amp; HR</span>
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
 
+        <!-- Card 2 -->
+        <div
+          class="glass-card p-8 flex flex-col gap-6"
+          data-aos="fade-up"
+          data-aos-duration="700"
+          data-aos-delay="200"
+        >
+          <!-- Quote icon -->
+          <svg class="w-8 h-8 text-purple-400/50" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+
+          <!-- Quote text -->
+          <blockquote class="text-slate-300 leading-relaxed text-base flex-1">
+            Beyond her technical skills, what sets Adheke Eloho Joy apart is her
+            exceptional teamwork and collaboration. In our fast-paced industry,
+            effective communication and collaboration are crucial. Adheke Eloho Joy
+            has consistently proven her ability to work seamlessly with cross-functional
+            teams, fostering a positive and collaborative work environment.
+          </blockquote>
+
+          <!-- Divider -->
+          <div class="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+          <!-- Author -->
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0">
+              <img
+                src="../assets/mena2.jpg"
+                alt="Idise Elomena"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="font-semibold text-white font-display">Idise Elomena</p>
+              <p class="text-slate-400 text-sm leading-snug mt-0.5">
+                Senior Developer<br />
+                <span class="text-slate-500 text-xs">Sparkle Nigeria</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </template>

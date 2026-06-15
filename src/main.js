@@ -7,7 +7,11 @@ import "aos/dist/aos.css";
 
 import './assets/main.css'
 
-AOS.init();
+AOS.init({
+  once: true,
+  offset: 60,
+  easing: 'ease-out-cubic',
+});
 const app = createApp(App)
 
 app.use(router)
