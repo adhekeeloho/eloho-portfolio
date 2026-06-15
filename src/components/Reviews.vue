@@ -32,7 +32,7 @@
 
           <!-- Quote text -->
           <blockquote class="text-slate-300 leading-relaxed text-base flex-1">
-            Adheke Eloho Joy has technical proficiency in VueJs and ReactJs programming
+            Adheke Eloho Joy has technical proficiency in VueJs, ReactJs and NextJs programming
             languages which is truly impressive. She has consistently demonstrated the
             ability to mention specific achievements in projects which therefore
             showcases her analytical and problem-solving skills.

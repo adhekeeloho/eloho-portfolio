@@ -217,4 +217,146 @@
     background: linear-gradient(to bottom, #60a5fa, #2dd4bf, #a78bfa);
     border-radius: 2px;
   }
+
+  /* ── Orbit animation wrap ── */
+  .orbit-wrap {
+    position: relative;
+    width: 440px;
+    height: 480px;
+  }
+
+  .orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  /* ── Orbit ellipse rings ── */
+  .orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .orbit-r1 {
+    width: 290px;
+    height: 290px;
+    margin-top: -145px;
+    margin-left: -145px;
+    border: 1px solid rgba(45, 212, 191, 0.24);
+    box-shadow: inset 0 0 24px rgba(45, 212, 191, 0.04), 0 0 8px rgba(45, 212, 191, 0.06);
+    animation: ring1-spin 18s linear infinite;
+  }
+
+  .orbit-r2 {
+    width: 355px;
+    height: 355px;
+    margin-top: -177px;
+    margin-left: -177px;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    box-shadow: inset 0 0 20px rgba(96, 165, 250, 0.03);
+    animation: ring2-spin 26s linear infinite;
+  }
+
+  .orbit-r3 {
+    width: 416px;
+    height: 416px;
+    margin-top: -208px;
+    margin-left: -208px;
+    border: 1px solid rgba(167, 139, 250, 0.13);
+    animation: ring3-spin 35s linear infinite;
+  }
+
+  /* ── Floating tech label pills ── */
+  .o-tag {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    white-space: nowrap;
+    z-index: 20;
+    animation: o-tag-float 6.5s ease-in-out infinite;
+  }
+
+  .o-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 6px currentColor;
+  }
+
+  /* ── Mini code terminal card ── */
+  .code-card {
+    background: rgba(10, 10, 20, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px 14px;
+    z-index: 20;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  /* ── Background floating code snippets ── */
+  .code-bg-snippet {
+    position: absolute;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    animation: code-drift 10s ease-in-out infinite;
+  }
+}
+
+/* ── Terminal line reveal ── */
+.t-line {
+  opacity: 0;
+  animation: t-reveal 0.45s ease forwards;
+}
+@keyframes t-reveal {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Activity graph cell pulse ── */
+.act-cell {
+  animation: act-pulse 3s ease-in-out infinite;
+}
+@keyframes act-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ── Orbit ring keyframes (outside @layer for specificity) ── */
+@keyframes ring1-spin {
+  from { transform: rotate(25deg)  scaleY(0.42); }
+  to   { transform: rotate(385deg) scaleY(0.42); }
+}
+@keyframes ring2-spin {
+  from { transform: rotate(-40deg)  scaleY(0.37); }
+  to   { transform: rotate(-400deg) scaleY(0.37); }
+}
+@keyframes ring3-spin {
+  from { transform: rotate(60deg)  scaleY(0.45); }
+  to   { transform: rotate(420deg) scaleY(0.45); }
+}
+@keyframes o-tag-float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
 }

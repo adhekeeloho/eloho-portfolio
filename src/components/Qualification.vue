@@ -1,4 +1,40 @@
 <script setup>
+import AnimeCoder from './AnimeCoder.vue';
+
+// Deterministic pseudo-random — same seed = same visual pattern every render
+function seededRng(seed) {
+  let s = seed;
+  return () => { s = (s * 1664525 + 1013904223) & 0x7fffffff; return s / 0x7fffffff; };
+}
+const rng = seededRng(137);
+
+// Calculate how many weeks of the current year have elapsed
+const _now = new Date();
+const _startOfYear = new Date(_now.getFullYear(), 0, 1);
+const _dayOfYear = Math.floor((_now - _startOfYear) / 86400000);
+const weeksElapsed = Math.min(52, Math.ceil((_dayOfYear + 1) / 7));
+const currentYear = _now.getFullYear();
+
+// 52 weeks × 7 days = 364 cells (grid-auto-flow: column fills day-by-day per week)
+// Weeks beyond weeksElapsed are "future" — shown as near-invisible placeholders
+const activityCells = Array.from({ length: 364 }, (_, i) => {
+  const weekIndex = Math.floor(i / 7);
+  if (weekIndex >= weeksElapsed) return { level: 'future', delay: 0 };
+  const r = rng();
+  const weekDelay = weekIndex * 0.018;
+  if (r > 0.76) return { level: 'high', delay: weekDelay };
+  if (r > 0.55) return { level: 'mid',  delay: weekDelay };
+  if (r > 0.35) return { level: 'low',  delay: weekDelay };
+  return           { level: 'empty', delay: 0 };
+});
+const cellClass = {
+  high:   'bg-teal-400/80 act-cell',
+  mid:    'bg-teal-400/42 act-cell',
+  low:    'bg-blue-400/22',
+  empty:  'bg-white/[0.04]',
+  future: 'bg-white/[0.015]',
+};
+
 const experiences = [
   {
     id: 1,
@@ -143,6 +179,90 @@ const typeLabel = {
               </li>
             </ul>
           </div>
+
+          <!-- ── Animated Dev Terminal ── -->
+          <div class="glass-card p-4 mt-6 overflow-hidden">
+            <!-- Window chrome -->
+            <div class="flex items-center gap-1.5 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400/65"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/65"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400/65"></span>
+              <span class="ml-2 text-[10px] text-slate-500 font-mono tracking-wide">~/eloho-dev — zsh</span>
+            </div>
+            <!-- Terminal lines (each reveals with staggered animation) -->
+            <div class="font-mono text-[11px] leading-relaxed space-y-1">
+              <p class="t-line" style="animation-delay:0.3s;">
+                <span class="text-teal-400">eloho</span><span class="text-slate-600">:~$</span>
+                <span class="text-white ml-1">git log --oneline -3</span>
+              </p>
+              <p class="t-line" style="animation-delay:0.85s;">
+                <span class="text-yellow-400">a1f3d2c</span>
+                <span class="text-slate-400 ml-1.5">feat: ship new dashboard view</span>
+              </p>
+              <p class="t-line" style="animation-delay:1.25s;">
+                <span class="text-yellow-400">b82e4a1</span>
+                <span class="text-slate-400 ml-1.5">fix: pixel-perfect UI polish</span>
+              </p>
+              <p class="t-line" style="animation-delay:1.6s;">
+                <span class="text-yellow-400">c93f0e8</span>
+                <span class="text-slate-400 ml-1.5">perf: lazy load heavy routes</span>
+              </p>
+              <p class="t-line mt-2" style="animation-delay:2.1s;">
+                <span class="text-teal-400">eloho</span><span class="text-slate-600">:~$</span>
+                <span class="text-white ml-1">npm run build</span>
+              </p>
+              <p class="t-line" style="animation-delay:2.65s;">
+                <span class="text-green-400 mr-1">✓</span>
+                <span class="text-slate-400">Built in 1.2s</span>
+                <span class="text-slate-600 mx-1">·</span>
+                <span class="text-teal-300">ready to deploy</span>
+              </p>
+              <p class="t-line mt-1" style="animation-delay:3.2s;">
+                <span class="text-teal-400">eloho</span><span class="text-slate-600">:~$</span>
+                <span class="text-teal-300 ml-1 animate-terminal-blink">▌</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- ── Full-Year Activity Graph (52 × 7) ── -->
+          <div class="mt-5">
+            <div class="flex items-center justify-between mb-2.5">
+              <p class="text-[10px] text-slate-600 uppercase tracking-widest font-bold">Commit activity — {{ currentYear }}</p>
+              <div class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse-slow"></span>
+                <span class="text-[10px] text-teal-400 font-semibold">Active</span>
+              </div>
+            </div>
+            <!-- Month labels -->
+            <div class="flex justify-between mb-1 pr-0.5">
+              <span v-for="m in ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']"
+                    :key="m" class="text-[8px] text-slate-700">{{ m }}</span>
+            </div>
+            <!-- 52-column × 7-row grid, fills column-by-column (week by week) -->
+            <div
+              class="grid gap-[2px]"
+              style="grid-template-rows: repeat(7, 7px); grid-auto-flow: column; grid-auto-columns: 7px;"
+            >
+              <div
+                v-for="(cell, i) in activityCells"
+                :key="i"
+                class="w-[7px] h-[7px] rounded-[2px]"
+                :class="cellClass[cell.level]"
+                :style="cell.level !== 'empty' ? `animation-delay:${cell.delay}s` : ''"
+              ></div>
+            </div>
+            <!-- Day labels -->
+            <div class="flex flex-col gap-[2px] absolute -left-6 top-0 hidden">
+              <span v-for="d in ['M','T','W','T','F','S','S']" :key="d"
+                    class="text-[7px] text-slate-700 h-[7px] flex items-center">{{ d }}</span>
+            </div>
+          </div>
+
+          <!-- ── Anime Coder ── -->
+          <div class="mt-6">
+            <AnimeCoder />
+          </div>
+
         </div>
 
         <!-- ── Right: Timeline ── -->

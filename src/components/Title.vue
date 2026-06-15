@@ -3,6 +3,24 @@
     <!-- Orb -->
     <div class="orb w-[400px] h-[400px] bg-blue-700/10 top-0 right-0"></div>
 
+    <!-- Floating code decoration (desktop) -->
+    <div class="hidden lg:block absolute top-10 right-8 pointer-events-none select-none z-0">
+      <div class="code-card opacity-40" style="animation-delay:0.5s;">
+        <div class="flex items-center gap-1.5 mb-2">
+          <span class="w-2 h-2 rounded-full bg-red-400/60"></span>
+          <span class="w-2 h-2 rounded-full bg-yellow-400/60"></span>
+          <span class="w-2 h-2 rounded-full bg-green-400/60"></span>
+        </div>
+        <div class="font-mono text-[10px] leading-relaxed space-y-0.5 text-slate-400">
+          <p><span class="text-purple-400">function</span> <span class="text-teal-300">buildUI</span>() {</p>
+          <p class="pl-3"><span class="text-blue-400">const</span> design = <span class="text-green-300">'pixel-perfect'</span></p>
+          <p class="pl-3"><span class="text-blue-400">const</span> code = <span class="text-green-300">'clean'</span></p>
+          <p class="pl-3"><span class="text-yellow-400">return</span> { design, code }</p>
+          <p>}</p>
+        </div>
+      </div>
+    </div>
+
     <div class="container-max relative z-10">
       <!-- Header -->
       <div class="text-center mb-14" data-aos="fade-up" data-aos-duration="700">

@@ -14,11 +14,23 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 9s ease-in-out infinite',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
+        'code-drift': 'code-drift 10s ease-in-out infinite',
+        'terminal-blink': 'terminal-blink 1s step-end infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-18px)' },
+        },
+        'code-drift': {
+          '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+          '25%':  { transform: 'translateY(-12px) translateX(4px)' },
+          '50%':  { transform: 'translateY(-6px) translateX(-6px)' },
+          '75%':  { transform: 'translateY(5px) translateX(3px)' },
+        },
+        'terminal-blink': {
+          '0%, 100%': { opacity: '1' },
+          '50%':       { opacity: '0' },
         },
       },
       boxShadow: {

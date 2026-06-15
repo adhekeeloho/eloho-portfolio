@@ -29,7 +29,7 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
       :class="[
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         scrolled
-          ? 'glass border-b border-white/5 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.4)]'
+          ? 'glass !border-0 py-3 shadow-[0_4px_30px_rgba(0,0,0,0.4)]'
           : 'bg-transparent py-6',
       ]"
     >

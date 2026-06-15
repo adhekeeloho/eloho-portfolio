@@ -12,6 +12,18 @@ import Download from './Download.vue';
     <!-- Subtle grid -->
     <div class="absolute inset-0 bg-grid opacity-100"></div>
 
+    <!-- Floating background code snippets -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+      <span class="code-bg-snippet" style="top:10%;left:5%;animation-delay:0s;color:rgba(45,212,191,0.08);">&lt;Component /&gt;</span>
+      <span class="code-bg-snippet" style="top:72%;left:3%;animation-delay:1.8s;color:rgba(96,165,250,0.07);">v-model="data"</span>
+      <span class="code-bg-snippet" style="top:86%;left:26%;animation-delay:3.2s;color:rgba(167,139,250,0.07);">useState(false)</span>
+      <span class="code-bg-snippet" style="top:18%;right:3%;animation-delay:0.7s;color:rgba(45,212,191,0.06);">async / await</span>
+      <span class="code-bg-snippet" style="top:54%;right:4%;animation-delay:2.5s;color:rgba(96,165,250,0.07);">{ ...spread }</span>
+      <span class="code-bg-snippet" style="top:40%;left:1%;animation-delay:4s;color:rgba(251,146,60,0.07);">useEffect([])</span>
+      <span class="code-bg-snippet" style="top:63%;right:2%;animation-delay:1.3s;color:rgba(167,139,250,0.07);">import { ref }</span>
+      <span class="code-bg-snippet" style="top:30%;left:7%;animation-delay:5s;color:rgba(45,212,191,0.06);">computed(() =&gt; {})</span>
+    </div>
+
     <div class="container-max relative z-10 py-16 lg:py-24">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -26,14 +38,14 @@ import Download from './Download.vue';
 
           <!-- Heading -->
           <div>
-            <p class="text-slate-400 font-medium text-lg mb-2 tracking-wide">Hi there, I'm</p>
-            <h1 class="text-5xl lg:text-[4.5rem] font-bold font-display leading-none text-white mb-3">
-              Eloho Joy<br />
-              <span class="gradient-text">Adheke.</span>
+            <p class="text-slate-400 font-medium text-base mb-3 tracking-wide">Hi there, I'm</p>
+            <h1 class="font-display leading-none mb-4">
+              <span class="block text-sm text-slate-500 font-semibold tracking-[0.32em] uppercase mb-2">Eloho Joy</span>
+              <span class="block text-[3.6rem] lg:text-[5.2rem] font-black gradient-text leading-none">Adheke</span>
             </h1>
-            <div class="flex items-center gap-3 mt-5">
+            <div class="flex items-center gap-3">
               <div class="h-[2px] w-10 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full"></div>
-              <p class="text-2xl text-slate-300 font-display font-medium">
+              <p class="text-xl lg:text-2xl text-slate-300 font-display font-medium">
                 Software Developer
               </p>
             </div>
@@ -85,37 +97,123 @@ import Download from './Download.vue';
           </div>
         </div>
 
-        <!-- ── Right: Photo ── -->
-        <div class="relative flex justify-center lg:justify-end order-1 lg:order-2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-          <!-- Glow behind image -->
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="w-80 h-80 rounded-full bg-teal-400/10 blur-3xl"></div>
+        <!-- ── Right: Mobile – mini orbital ── -->
+        <div class="lg:hidden relative flex justify-center order-1 pb-6" data-aos="fade-up" data-aos-duration="800">
+          <div class="relative" style="width:310px;height:350px;">
+
+            <!-- Glow -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-48 h-48 rounded-full bg-teal-400/10 blur-3xl"></div>
+            </div>
+
+            <!-- Two orbit rings (reuse .orbit-ring base + inline overrides) -->
+            <div class="orbit-ring" style="width:252px;height:252px;margin-top:-126px;margin-left:-126px;border:1px solid rgba(45,212,191,0.22);animation:ring1-spin 18s linear infinite;"></div>
+            <div class="orbit-ring" style="width:298px;height:298px;margin-top:-149px;margin-left:-149px;border:1px solid rgba(96,165,250,0.13);animation:ring2-spin 26s linear infinite;"></div>
+
+            <!-- Tech labels -->
+            <div class="o-tag" style="top:3%;left:50%;translate:-50% 0;animation-delay:0s;font-size:0.62rem;padding:4px 9px;">
+              <span class="o-dot" style="background:#2dd4bf;box-shadow:0 0 5px #2dd4bf;width:5px;height:5px;"></span> Vue.js
+            </div>
+            <div class="o-tag" style="top:24%;right:0;animation-delay:0.8s;font-size:0.62rem;padding:4px 9px;">
+              <span class="o-dot" style="background:#60a5fa;box-shadow:0 0 5px #60a5fa;width:5px;height:5px;"></span> React.js
+            </div>
+            <div class="o-tag" style="bottom:4%;left:50%;translate:-50% 0;animation-delay:2.4s;font-size:0.62rem;padding:4px 9px;">
+              <span class="o-dot" style="background:#fb923c;box-shadow:0 0 5px #fb923c;width:5px;height:5px;"></span> TypeScript
+            </div>
+            <div class="o-tag" style="top:24%;left:0;animation-delay:1.2s;font-size:0.62rem;padding:4px 9px;">
+              <span class="o-dot" style="background:#a78bfa;box-shadow:0 0 5px #a78bfa;width:5px;height:5px;"></span> Next.js
+            </div>
+
+            <!-- Photo centered -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+              <div class="gradient-border relative" style="border-radius:22px;">
+                <div class="bg-[#06060f] rounded-[21px] p-1.5">
+                  <img src="../assets/eloho-profile.jpeg" alt="Eloho Joy Adheke"
+                       class="w-[168px] h-[208px] object-cover rounded-[18px]" />
+                </div>
+                <div class="absolute -bottom-4 -left-4 glass px-3 py-2 rounded-xl shadow-card border border-white/10">
+                  <p class="text-[10px] text-slate-400 font-medium">Experience</p>
+                  <p class="text-base font-bold gradient-text font-display leading-none mt-0.5">4+ Years</p>
+                </div>
+                <div class="absolute -top-4 -right-4 glass px-3 py-2 rounded-xl shadow-card border border-white/10">
+                  <p class="text-[10px] text-slate-400 font-medium">Projects</p>
+                  <p class="text-base font-bold gradient-text font-display leading-none mt-0.5">15+</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div class="w-60 h-60 rounded-full bg-purple-400/10 blur-3xl"></div>
-          </div>
+        </div>
 
-          <!-- Gradient border card -->
-          <div class="gradient-border relative" style="border-radius: 28px;">
-            <div class="bg-[#06060f] rounded-[27px] p-2">
-              <img
-                src="../assets/eloho-profile.jpeg"
-                alt="Eloho Joy Adheke"
-                class="w-[280px] h-[340px] lg:w-[320px] lg:h-[390px] object-cover rounded-3xl"
-              />
+        <!-- ── Right: Desktop orbital animation ── -->
+        <div class="hidden lg:flex justify-end order-1 lg:order-2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="orbit-wrap">
+
+            <!-- Rotating ellipse rings (like Passpoint) -->
+            <div class="orbit-ring orbit-r1"></div>
+            <div class="orbit-ring orbit-r2"></div>
+            <div class="orbit-ring orbit-r3"></div>
+
+            <!-- Floating tech label pills -->
+            <div class="o-tag" style="top:2%;left:50%;translate:-50% 0;animation-delay:0s;">
+              <span class="o-dot" style="background:#2dd4bf;box-shadow:0 0 6px #2dd4bf;"></span> Vue.js
+            </div>
+            <div class="o-tag" style="top:18%;right:0;animation-delay:0.8s;">
+              <span class="o-dot" style="background:#60a5fa;box-shadow:0 0 6px #60a5fa;"></span> React.js
+            </div>
+            <div class="o-tag" style="bottom:28%;right:0;animation-delay:1.6s;">
+              <span class="o-dot" style="background:#a78bfa;box-shadow:0 0 6px #a78bfa;"></span> Next.js
+            </div>
+            <div class="o-tag" style="bottom:2%;left:50%;translate:-50% 0;animation-delay:2.4s;">
+              <span class="o-dot" style="background:#fb923c;box-shadow:0 0 6px #fb923c;"></span> TypeScript
+            </div>
+            <div class="o-tag" style="top:26%;left:0;animation-delay:1.2s;">
+              <span class="o-dot" style="background:#f472b6;box-shadow:0 0 6px #f472b6;"></span> Tailwind
+            </div>
+            <div class="o-tag" style="bottom:38%;left:0;animation-delay:3s;">
+              <span class="o-dot" style="background:#34d399;box-shadow:0 0 6px #34d399;"></span> Figma
             </div>
 
-            <!-- Floating stat 1 -->
-            <div class="absolute -bottom-5 -left-6 glass px-4 py-3 rounded-2xl shadow-card border border-white/10">
-              <p class="text-[11px] text-slate-400 font-medium">Experience</p>
-              <p class="text-xl font-bold gradient-text font-display leading-none mt-0.5">4+ Years</p>
+            <!-- Profile photo centered in orbit -->
+            <div class="orbit-center">
+              <div class="gradient-border relative" style="border-radius: 28px;">
+                <div class="bg-[#06060f] rounded-[27px] p-2">
+                  <img
+                    src="../assets/eloho-profile.jpeg"
+                    alt="Eloho Joy Adheke"
+                    class="w-[230px] h-[280px] object-cover rounded-3xl"
+                  />
+                </div>
+                <!-- Stat 1 -->
+                <div class="absolute -bottom-5 -left-6 glass px-4 py-3 rounded-2xl shadow-card border border-white/10">
+                  <p class="text-[11px] text-slate-400 font-medium">Experience</p>
+                  <p class="text-xl font-bold gradient-text font-display leading-none mt-0.5">4+ Years</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="absolute -top-5 -right-6 glass px-4 py-3 rounded-2xl shadow-card border border-white/10">
+                  <p class="text-[11px] text-slate-400 font-medium">Projects</p>
+                  <p class="text-xl font-bold gradient-text font-display leading-none mt-0.5">15+</p>
+                </div>
+              </div>
             </div>
 
-            <!-- Floating stat 2 -->
-            <div class="absolute -top-5 -right-6 glass px-4 py-3 rounded-2xl shadow-card border border-white/10">
-              <p class="text-[11px] text-slate-400 font-medium">Projects</p>
-              <p class="text-xl font-bold gradient-text font-display leading-none mt-0.5">15+</p>
+            <!-- Floating mini code terminal -->
+            <div class="code-card absolute" style="bottom:9%;right:-2%;animation-delay:1.5s;">
+              <div class="flex items-center gap-1.5 mb-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+                <span class="ml-2 text-[9px] text-slate-500 font-mono">eloho.dev</span>
+              </div>
+              <div class="font-mono text-[10px] leading-relaxed space-y-0.5">
+                <p><span class="text-purple-400">const</span> <span class="text-teal-300">dev</span> <span class="text-slate-400">= () =&gt; {</span></p>
+                <p class="pl-3"><span class="text-slate-500">// crafting magic ✨</span></p>
+                <p class="pl-3"><span class="text-blue-400">return</span> <span class="text-green-300">'shipping...'</span></p>
+                <p class="text-slate-400">}</p>
+                <p class="mt-1 text-teal-400">▊<span class="animate-terminal-blink">_</span></p>
+              </div>
             </div>
+
           </div>
         </div>
 
