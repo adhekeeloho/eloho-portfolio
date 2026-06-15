@@ -48,9 +48,9 @@ const experiences = [
   {
     id: 6,
     role: 'M.Sc Information Management',
-    org: 'Certification — 2025',
+    org: 'Education — 2025',
     period: '2025',
-    type: 'cert',
+    type: 'education',
     active: false,
     highlights: [],
   },
